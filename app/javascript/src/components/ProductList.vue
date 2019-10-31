@@ -9,13 +9,12 @@
         />
         <div class="caption">
           <router-link
-            :to="{ name: 'viewProduct', params: { productId: product.id }, hash: '#related' }"
+            :to="{ name: 'viewProduct', params: { productId: product.id } }"
             tag="h4"
-            class="group inner list-group-item-heading"
-          >
-            <a>{{ product.name }}</a>
+            class="group inner list-group-item-heading">
+          <a>{{ product.name }}</a>
           </router-link>
-
+        
           <p class="group inner list-group-item-text">{{ product.description }}</p>
           <br />
 
@@ -66,7 +65,7 @@
             productId: product.id
           },
           query: {
-            discount: 10
+            discount: 20
           }
         });
       }
